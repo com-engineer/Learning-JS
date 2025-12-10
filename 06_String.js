@@ -1,10 +1,10 @@
 //concat the strings
-let string1 = "Hello, ";
-let count=50;
-let concatenatedString = string1 + count;
-console.log(concatenatedString); // old and outdated method
+// let string1 = "Hello, ";
+// let count=50;
+// let concatenatedString = string1 + count;
+// console.log(concatenatedString); // old and outdated method
 
-console.log(`${string1} and its count is ${count}`);//new modern way
+// console.log(`${string1} and its count is ${count}`);//new modern way
 
 //another method to declare the string
 const gameName=new String('Dynamo');
@@ -19,7 +19,7 @@ const gameName=new String('Dynamo');
 // console.log(gameName.charAt(2));
 // console.log(gameName.indexOf('D'));
 // substring(start,end)
-// console.log(gameName.slice(-6,4));
+console.log(gameName.slice(-6,4));
 
 // console.log(gameName.replace('Dynamo','Valorant'));
 
@@ -29,8 +29,8 @@ const gameName=new String('Dynamo');
 
 // console.log(gameName.includes('mo'));
 
-console.log(gameName.split(''));//split into array of characters
-console.log(gameName.split('mo'));//split into array of substrings based on separator
+// console.log(gameName.split(''));//split into array of characters
+console.log(gameName.split('n'));//split into array of substrings based on separator
 
 
 
