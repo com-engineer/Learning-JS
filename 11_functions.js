@@ -33,7 +33,7 @@ function calculateCartPrice(...num1){
 }
 console.log(calculateCartPrice(200,400,600));//returns an array
 
-//passing object
+//passing object to the function
 
 const user={
     username:"deepu",
@@ -52,4 +52,12 @@ handleObject({
     username:"deepu1",
     price:299
 })
+//passing array to the function
+const myNewArray=[200,400,100,600];
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+console.log(returnSecondValue(myNewArray));
 
