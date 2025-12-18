@@ -60,6 +60,12 @@
 // console.log(true);//true
 // console.log(+true);//1
 
+let x=1;
+let y=x++;
+console.log(y);
+console.log(x);
+
+
 // /If used postfix, with operator after operand (for example, x++), the increment operator increments
 //  and returns the value before incrementing.
 

@@ -106,7 +106,14 @@ const num=[1,2,3,4,5,6,7,8]
 // const userBooks=books.filter((bk)=> bk.genre=="Productivity");
 // console.log(userBooks);
 
+//+++map+++
+/*
+The .map() method is a function available on all JavaScript arrays. It is a higher-order function 
+that creates a new array populated with the results of calling a provided callback function on every 
+element in the original array, without modifying the original
+*/
 // const newNum=num.map((num)=>num+10);//act like filter returns the value
+
 //chaining
 const newNum=num.map((num)=> num*10).map((item)=> item+1).filter((item)=> item>30)
 console.log(newNum);

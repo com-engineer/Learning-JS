@@ -19,7 +19,9 @@ const gameName=new String('Dynamo');
 // console.log(gameName.charAt(2));
 // console.log(gameName.indexOf('D'));
 // substring(start,end)
-console.log(gameName.slice(-6,4));
+console.log(gameName.slice(-6,4));//=>Dyna
+console.log(gameName);
+
 
 // console.log(gameName.replace('Dynamo','Valorant'));
 
@@ -27,7 +29,7 @@ console.log(gameName.slice(-6,4));
 // let string2="     Hello World     ";
 // console.log(string2.trim());
 
-// console.log(gameName.includes('mo'));
+// console.log(gameName.includes('mo'));//=>yes/No
 
 // console.log(gameName.split(''));//split into array of characters
 console.log(gameName.split('n'));//split into array of substrings based on separator
