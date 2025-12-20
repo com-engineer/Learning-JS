@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="title" class="heading">DOM learning on chair aur code
+            <span style="display:none">Test text</span>
+            <!-- difference between 
+             innerHtml,innertext,textContent 
+             selecters
+             document.getElementById()
+             document.getElemntByClassName()
+             document.getELementByTag()
+             document.querySelector('#id')
+             document.querySelector('.class-name')
+             document.querySelector('CSS selector') returns only one elemnt
+             document.querySelectorAll('CSS selector') returns all the element in the form of list
+            it returns a nodelist which is not the array so we cannot use all the methos of array
+            
+            method to convert node list to array
+            Array.from(nodeList)
+            -->
+        </h1>
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, nam!</h2>
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, nam!</h2>
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, nam!</h2>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, nobis?</p>
+        <ul>
+            <li>one</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+    </div>
+</body>
+</html>

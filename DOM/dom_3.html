@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning with chai aur code</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // function addLanguage(langName){
+    //     const li=document.createElement('li');
+    //     li.innerHTML=`${langName}`;
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addLanguage("Python");
+    // addLanguage("TypeScript");
+    //here there is the problem of traversing where while appending it need to traverse
+    //deep through the tree
+
+    function addOptiLanguage(langName){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addOptiLanguage("python")
+
+//Edit
+    const SecondLang=document.querySelector("li:nth-child(2)");
+    // SecondLang.innerHTML="Mojo"
+    const newli=document.createElement('li');
+    newli.textContent="MOjo";
+    SecondLang.replaceWith(newli)
+
+    //edit
+    const firstLang=document.querySelector("li:first-child")
+    firstLang.outerHTML='<li>TypeScript</li>'
+
+    //remove
+    const lastLang=document.querySelector("li:last-child")
+    lastLang.remove();
+</script>
+</html>
