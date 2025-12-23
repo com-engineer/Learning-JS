@@ -13,7 +13,7 @@ const p=document.createElement('p');
 let prevGuess=[];
 let numGuess=1;
 
-let playGame=true;
+let playGame=true;//do not have any use in this logic
 
 if(playGame){
   submit.addEventListener('click',function(e){
@@ -90,7 +90,7 @@ function newGame(){
     remaining.innerHTML=`${11-numGuess}`;
     userInput.removeAttribute('disabled');
     startOver.removeChild(p)
-    playGame=true;
+    // playGame=true;
   })
 }
 
