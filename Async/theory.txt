@@ -1,0 +1,19 @@
+Javascript--->Synchronous    }default javascript
+          --->Single threaded }
+
+Execution context-->Execute one line of a code at a time
+   call stck      Memory heap  
+
+   ==>each operation waits for the last one to complete before executing
+
+Blocking code                   vs    Non Blocking code
+-->Block the flow of program         --->doesn't block the program
+-->Read file Sync                    --->Read file Async
+                                     --=>feels good but fails or can be problematic in some edge use cases
+                                    --->like suppose i have to write the user data in some file and while i am 
+                                    writing the data the next code(give confirmation message to user) gets executed asynchronously.if some error happened
+                                    during wrting then the program which is already executed will not consider this error
+                                    so it can create inconsistancy
+
+
+c:\Users\Gaurav\Downloads\WhatsApp Image 2025-12-23 at 17.27.48.jpeg
