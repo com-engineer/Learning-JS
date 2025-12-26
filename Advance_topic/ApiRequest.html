@@ -1,0 +1,65 @@
+<!-- API=>Application programming Interface -->
+ <!-- act as a mediator or a messanger between two software application without knowing the insights of the application -->
+
+<!-- Legacy Method=>XML http request related AJAX programming -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body style="background-color: #212121; color:white;">
+    Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+ </body>
+ <script>
+    const xhr=new XMLHttpRequest();
+    const reqUrl='https://api.github.com/users/com-engineer';
+    xhr.open('Get',reqUrl);//req is not send it we need it to call it
+    // this status code chnages whe req is sent
+
+    //we can continuosly track the status
+    xhr.onreadystatechange=function(){
+        
+        console.log(xhr.readyState);
+        if(xhr.readyState==4){
+            // const data=this.responseText;//=>this gives string 
+            const data=JSON.parse(this.responseText);//=>converts string to object
+            console.log(data.followers);//=>undefined
+            console.log(typeof data);//=>string but expected was object
+            //whenever any response comes it is in the string formate maximum time
+
+            /*
+            Assignment
+            create a card place one photo inside it then folowers bellow it
+            */
+            const div=document.createElement('div');
+            div.innerHTML=`<img src="user.jpg">
+            <p>Number of followers <span>${data.followers}</span></p>
+            `
+            const bdy=document.querySelector('body');
+            bdy.appendChild(div);
+            
+            
+        }
+    }
+    xhr.send();//after this only the req will be sent
+
+
+
+    //console.log is not the part of core js
+//it is the debuger tool deb tool
+//it is injected during run time
+
+//js runs in c++ language therefore v8 engine is return in c++
+//inside the github repo of v8 where source code is present contains "d8-console.cc" which
+//is nothing but our "console.log()"
+
+
+ </script>
+ </html>
