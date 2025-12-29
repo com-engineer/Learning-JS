@@ -19,4 +19,4 @@ Object literal
 Abstraction
 Encapsulation
 Inheritance
-Pollymorphism
+Pollymorphism 
