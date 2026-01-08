@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // // function init() {
+    // //     let name = "Mozilla"; // name is a local variable created by init
+    // //     function displayName() {
+    // //         // displayName() is the inner function, that forms a closure
+    // //         console.log(name); // use variable declared in the parent function
+    // //     }
+    // //     displayName();
+    // // }
+    // // init();
+
+    // function outer(){
+    //     let userName="gaurav";
+    //     function inner(){
+    //         console.log("inner",userName);
+
+    //     }
+    //     inner();
+    //     //inner function is sharing the memry with outer function
+    // }
+    // outer()
+    // console.log("outer",userName);
+
+
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;//this returns all the lexical scoping not only the executional context of function
+    //     //now we can able to print the name
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+</script>
+<script>
+    // document.querySelector('#orange').onclick=function(){
+    //     document.body.style.backgroundColor='orange';
+    // }
+    // document.querySelector('#green').onclick=function(){
+    //     document.body.style.backgroundColor='green';
+    // }
+    //now instrcutor gives me 500 colors and buttons to do this will i going to do this again again->No DRY->do not repeat yourself
+    
+    function clickHandler(color){
+        // document.body.style.backgroundColor=`${color}`;
+        return function(){
+            document.body.style.backgroundColor=`${color}`;
+//returns a lexical scope
+        } 
+    }
+    document.getElementById('orange').onclick=clickHandler("orange")
+    document.getElementById('green').onclick=clickHandler("green")//but these two runs directly it doesn't 
+    //wait for the click event
+    //this happens bcz it was expecting a function in return but we directly executed thefunctiom
+</script>
+</html>
