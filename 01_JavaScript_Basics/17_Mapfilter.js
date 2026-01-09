@@ -108,6 +108,10 @@ const num=[1,2,3,4,5,6,7,8]
 
 //+++map+++
 /*
+❓ “Har element ko change karna hai?” → map
+
+❓ “Kuch elements chahiye, kuch nahi?” → filter
+
 The .map() method is a function available on all JavaScript arrays. It is a higher-order function 
 that creates a new array populated with the results of calling a provided callback function on every 
 element in the original array, without modifying the original
